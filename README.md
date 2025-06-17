@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# 🎯 予防接種スケジューラー - React TypeScript ポートフォリオ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 概要
 
-Currently, two official plugins are available:
+100 日コーディングチャレンジの中で作成した、**育児実用向けの予防接種管理アプリ**です。  
+React + TypeScript を使い、**実務的な設計力・データ構造整理・UX 改善**を徹底的に磨きました。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💉 主な機能
 
-## Expanding the ESLint configuration
+- 生年月日を登録し、自動でスケジュールを生成
+- 1 行 1 接種枠の**シンプルでわかりやすい UI 設計**
+- 推奨月齢順で並ぶ予防接種一覧
+- 接種日を登録・履歴保存
+- 登録済みのワクチンは「済」で表示
+- データは全てローカル保存（localStorage）
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💻 技術スタック
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- React (TypeScript)
+- Vite
+- Tailwind CSS
+- dayjs（日付処理）
+- 状態管理 (useState, useEffect)
+- localStorage 永続化
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📚 学習ポイント
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **型駆動開発**（TypeScript での柔軟で拡張しやすい型設計）
+- **現実のワクチンスケジュールに即したマスター設計**
+- **UX 優先の状態管理と非同期処理**
+- localStorage によるシンプルな永続化
+- 実務でも通用する**データ設計 →UI 構築のフロー**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 📸 スクリーンショット
+
+![alt text](/src/assets/予防接種スケジュール.png)
+![alt text](/src/assets/誕生日登録.png)
+
+## 📝 今後の拡張アイデア
+
+- 次回接種日自動計算
+- 履歴の編集・削除機能
+- 家族・兄弟の複数人管理
+- グラフや統計表示
+- クラウド同期（Firebase, Supabase など）
